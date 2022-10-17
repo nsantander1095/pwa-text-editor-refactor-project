@@ -27,6 +27,9 @@ module.exports = () => {
         short_name: 'JATE',
         description: 'My text editor pwa',
         // possibly more here
+        fingerprints: false,
+        start_url: '/',
+        publicPath: '.',
       }),
       new InjectManifest({
         swSrc: './src-sw.js',
@@ -51,6 +54,7 @@ module.exports = () => {
             loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-env'],
+              plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
             },
           },
         },
