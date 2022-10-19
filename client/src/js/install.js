@@ -16,10 +16,10 @@ butInstall.addEventListener("click", async () => {
 
   window.deferredPrompt = null;
 
-  butInstall.setAttribute('disbaled', true);
-  butInstall.textContent = 'Installed';
 });
 
 window.addEventListener("appinstalled", (event) => {
   window.deferredPrompt = null;
+  butInstall.setAttribute('disbaled', true);
+  butInstall.textContent = 'Installed';
 });
