@@ -2,7 +2,7 @@ const butInstall = document.getElementById("buttonInstall");
 
 window.addEventListener("beforeinstallprompt", (event) => {
   window.deferredPrompt = event;
-  butInstall.classList.toggle("hidden", false);
+  butInstall.style.visibility = 'visible';
 });
 
 butInstall.addEventListener("click", async () => {
@@ -16,7 +16,8 @@ butInstall.addEventListener("click", async () => {
 
   window.deferredPrompt = null;
 
-  butInstall.classList.toggle("hidden", true);
+  butInstall.setAttribute('disbaled', true);
+  butInstall.textContent = 'Installed';
 });
 
 window.addEventListener("appinstalled", (event) => {
