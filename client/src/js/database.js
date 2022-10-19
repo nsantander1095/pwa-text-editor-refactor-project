@@ -34,7 +34,7 @@ export const getDb = async () => {
   if(typeof result == 'undefined'){
     return null;
   }
-  return result.jateContent;
+  return result?. value;
 };
 
 initdb();
